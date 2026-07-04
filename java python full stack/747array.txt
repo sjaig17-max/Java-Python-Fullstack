@@ -1,0 +1,18 @@
+class Solution
+{
+    public int dominantIndex(int[] nums)
+    {
+        int n=nums.length;
+        int arr[] = Arrays.copyOf(nums, n);
+        Arrays.sort(arr);
+        if((2*arr[n-2])<=arr[n-1])
+        {
+            for(int i=0;i<n;i++)
+            {
+                if(arr[n-1]==nums[i]) return i;
+            }
+        }
+        return -1;
+        
+    }
+}

@@ -1,0 +1,8 @@
+class Solution(object):
+    def halvesAreAlike(self,s):
+        v='aeiouAEIOU';c=0;n=len(s)
+        for i in range(n//2):
+            if s[i] in v:c+=1
+        for i in range(n//2,n):
+            if s[i] in v:c-=1
+        return c==0

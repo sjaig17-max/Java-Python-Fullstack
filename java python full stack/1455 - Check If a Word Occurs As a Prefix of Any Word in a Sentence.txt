@@ -1,0 +1,5 @@
+class Solution(object):
+    def isPrefixOfWord(self,sentence,searchWord):
+        for i,w in enumerate(sentence.split(),1):
+            if w.startswith(searchWord): return i
+        return -1
